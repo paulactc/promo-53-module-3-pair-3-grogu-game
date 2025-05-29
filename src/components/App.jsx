@@ -1,10 +1,24 @@
+import { useState } from "react";
 import "../styles/App.scss";
 
 function App() {
+  const [name, setName] = useState("");
+  const handleInputName = (ev) => {
+    setName(ev.target.value);
+  };
+
   return (
     <>
-      <header>
-        <h1>¡Cuidado con Grogu!</h1>
+      <header className="header">
+        <h1>¡Cuidado con Grogu {name}!</h1>
+        <div>
+          <h4> Introduce tu nombre</h4>
+          <input
+            type="text"
+            onInput={handleInputName}
+            placeholder="Escribe tu nombre"
+          />
+        </div>
       </header>
       <main class="page">
         <section class="board">
