@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/App.scss";
+import Header from "./Header";
 
 function App() {
   const [name, setName] = useState("");
@@ -9,17 +10,8 @@ function App() {
 
   return (
     <>
-      <header className="header">
-        <h1>¡Cuidado con Grogu {name}!</h1>
-        <div>
-          <h4> Introduce tu nombre</h4>
-          <input
-            type="text"
-            onInput={handleInputName}
-            placeholder="Escribe tu nombre"
-          />
-        </div>
-      </header>
+      <Header />
+
       <main class="page">
         <section class="board">
           <div class="cell">
